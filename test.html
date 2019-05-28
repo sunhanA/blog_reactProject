@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style text = 'text/css'>
+        body {
+            margin: 0;
+            padding: 0;
+            /* transform-style: preserve-3d; */
+        }
+        .div{
+            transform-style: preserve-3d;
+            margin:  100px;
+        }
+        .div:hover{
+            /* transform: translate3d(5px, 5px, 0px) rotate3d(1,1,0,20deg); */
+            transform: translate3d(10px, -10px, 0px) skewX(-5deg);
+            /* transform: skewX(10deg); */
+        }
+    </style>
+</head>
+<body>
+    <div class = 'div' style = 'width: 100px;height: 100px;background: red'></div>
+
+    <script>
+        // let div = document.getElementsByClassName('div')[0];
+        // div.onmousemove= function(e){
+        //     console.log(e)
+        // }
+        
+    </script>
+</body>
+</html>
