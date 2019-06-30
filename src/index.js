@@ -1,7 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import App from './Route/route'
+// import App from './Home/App';
 // import * as serviceWorker from './serviceWorker';        //暂无用处
 
 ReactDOM.render(<App />, document.getElementById('root'));

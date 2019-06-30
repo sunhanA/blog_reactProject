@@ -1,9 +1,13 @@
-import React, {Component} from "react";
-import "./App.css";
+import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
+import './home.css'
 
 class App extends Component{
     state = {
         isShow: true,
+    }
+    componentDidMount() {
+      this.createText()
     }
     render(){
         return (
@@ -27,31 +31,36 @@ class App extends Component{
                 <div className = 'footer'>
                     <ul>
                         <li>
-                            <a href = 'http://sunh.top' className = 'small' draggable = {false}>首页</a>
+                            {/* <a href = 'http://sunh.top' className = 'small' draggable = {false}>首页</a> */}
+                            <Link to="/resume" className="small" draggable={false}>我的简历</Link>
                             <div className = 'menuIconBg small'>
                                 <img className = 'smallImg' src = 'images/notebook.svg'  draggable = {false} alt = '菜单'/>
                             </div>
                         </li>
                         <li>
-                            <a href = 'http://sunh.top' className = 'middle' draggable = {false}>首页</a>
+                            {/* <a href = 'http://sunh.top' className = 'middle' draggable = {false}>首页</a> */}
+                            <Link to="/work" className="middle" draggable={false}>我的工作</Link>
                             <div className = 'menuIconBg middle'>
                                 <img className = 'middleImg' src = 'images/bank.svg'  draggable = {false} alt = '菜单'/>
                             </div>
                         </li>
                         <li>
-                            <a href = 'http://sunh.top' className = 'large' draggable = {false}>首页</a>
+                            {/* <a href = 'http://sunh.top' className = 'large' draggable = {false}>首页</a> */}
+                            <Link to="/main" className="large" draggable={false}>主页</Link>
                             <div className = 'menuIconBg large'>
                                 <img className = 'largeImg' src = 'images/files-and-folders.svg'  draggable = {false} alt = '菜单'/>
                             </div>
                         </li>
                         <li>
-                            <a href = 'http://sunh.top' className = 'middle' draggable = {false}>首页</a>
+                            {/* <a href = 'http://sunh.top' className = 'middle' draggable = {false}>首页</a> */}
+                            <Link to="/book" className="middle" draggable={false}>我的书架</Link>
                             <div className = 'menuIconBg middle'>
                                 <img className = 'middleImg' src = 'images/app.svg'  draggable = {false} alt = '菜单'/>
                             </div>
                         </li>
                         <li>
-                            <a href = 'http://sunh.top' className = 'small' draggable = {false}>首页</a>
+                            {/* <a href = 'http://sunh.top' className = 'small' draggable = {false}>首页</a> */}
+                            <Link to="/topic" className="small" draggable={false}>前端社区</Link>
                             <div className = 'menuIconBg small'>
                                 <img className='smallImg' src = 'images/paper-plane.svg'  draggable = {false} alt = '菜单'/>
                             </div>
@@ -61,6 +70,8 @@ class App extends Component{
                 </div>
 
                 <div className = 'switchBtn' onClick = {() => this.controlShow()}>{this.state.isShow ? '关闭弹幕' : '打开弹幕'}</div>
+
+                <div className="barrage" ref="barrage"></div>
 
                 <div className = 'share'>
                     <p className = 'shareTitle'>分享</p>
@@ -118,6 +129,8 @@ class App extends Component{
     }
 
     controlShow(){
+        console.log(this.refs)
+        this.refs.barrage.classList.toggle('hidden')
         this.setState({isShow: !this.state.isShow});
     }
 
@@ -159,6 +172,24 @@ class App extends Component{
             shareUrl = 'http://service.weibo.com/share/share.php?';
         }
         window.open(shareUrl+content.join('&'));
+    }
+
+    createText() {
+      let arr = [
+        '弹幕测试',
+        '测试',
+        '哈哈哈',
+        '哈哈哈',
+        '哈哈哈',
+        '哈哈哈',
+        '哈哈哈',
+      ]
+      arr.map(value => {
+        let p = document.createElement('p')
+        p.textContent = value
+        p.setAttribute('style', `top:${Math.random()*500}px;right:-${Math.random()*100}px;color:rgb(${Math.random()*255}, ${Math.random()*255}, ${Math.random()*255})`)
+        this.refs.barrage.appendChild(p)
+      })
     }
 }
 export default App;

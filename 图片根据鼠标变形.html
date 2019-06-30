@@ -20,17 +20,38 @@
             transform: translate3d(10px, -10px, 0px) skewX(-5deg);
             /* transform: skewX(10deg); */
         }
+
+        .icon {
+            width: 100px;
+            height: 100px;
+            background: red;
+            border-radius: 50%;
+        }
+        .icon2 {
+            display: block;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: red;
+            background-image: url('./public/images/notebook.png');
+            background-repeat: no-repeat;
+        }
     </style>
 </head>
 <body>
     <div class = 'div' style = 'width: 100px;height: 100px;background: red'></div>
 
+    <img calss = 'icon' src="./public/images/notebook.png" alt="图">
+
+    <a href="#" class = 'icon2'></a>
     <script>
         // let div = document.getElementsByClassName('div')[0];
         // div.onmousemove= function(e){
         //     console.log(e)
         // }
         
+
+
     </script>
 </body>
 </html>
