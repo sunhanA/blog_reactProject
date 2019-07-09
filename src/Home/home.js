@@ -31,35 +31,30 @@ class App extends Component{
                 <div className = 'footer'>
                     <ul>
                         <li>
-                            {/* <a href = 'http://sunh.top' className = 'small' draggable = {false}>首页</a> */}
                             <Link to="/resume" className="small" draggable={false}>我的简历</Link>
                             <div className = 'menuIconBg small'>
                                 <img className = 'smallImg' src = 'images/notebook.svg'  draggable = {false} alt = '菜单'/>
                             </div>
                         </li>
                         <li>
-                            {/* <a href = 'http://sunh.top' className = 'middle' draggable = {false}>首页</a> */}
                             <Link to="/work" className="middle" draggable={false}>我的工作</Link>
                             <div className = 'menuIconBg middle'>
                                 <img className = 'middleImg' src = 'images/bank.svg'  draggable = {false} alt = '菜单'/>
                             </div>
                         </li>
                         <li>
-                            {/* <a href = 'http://sunh.top' className = 'large' draggable = {false}>首页</a> */}
                             <Link to="/main" className="large" draggable={false}>主页</Link>
                             <div className = 'menuIconBg large'>
                                 <img className = 'largeImg' src = 'images/files-and-folders.svg'  draggable = {false} alt = '菜单'/>
                             </div>
                         </li>
                         <li>
-                            {/* <a href = 'http://sunh.top' className = 'middle' draggable = {false}>首页</a> */}
                             <Link to="/book" className="middle" draggable={false}>我的书架</Link>
                             <div className = 'menuIconBg middle'>
                                 <img className = 'middleImg' src = 'images/app.svg'  draggable = {false} alt = '菜单'/>
                             </div>
                         </li>
                         <li>
-                            {/* <a href = 'http://sunh.top' className = 'small' draggable = {false}>首页</a> */}
                             <Link to="/topic" className="small" draggable={false}>前端社区</Link>
                             <div className = 'menuIconBg small'>
                                 <img className='smallImg' src = 'images/paper-plane.svg'  draggable = {false} alt = '菜单'/>
