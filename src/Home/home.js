@@ -179,7 +179,7 @@ class App extends Component{
         '哈哈哈',
         '哈哈哈',
       ]
-      arr.map(value => {
+      arr.forEach(value => {
         let p = document.createElement('p')
         p.textContent = value
         p.setAttribute('style', `top:${Math.random()*500}px;right:-${Math.random()*100}px;color:rgb(${Math.random()*255}, ${Math.random()*255}, ${Math.random()*255})`)

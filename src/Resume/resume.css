@@ -1,0 +1,99 @@
+.b{
+  border: 1px solid black;
+}
+.out{
+  width: 100vw;
+  height: auto;
+}
+.in{
+  max-width: 1000px;
+  margin: 0 auto;
+  background: white
+}
+.resumeTitle{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  width: 100%;
+  border-bottom: 5px solid skyblue;
+  box-shadow: 0 5px 0px blue;
+  margin-bottom: 2em;
+}
+.titleText{
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  margin-left: 8px;
+  font-size: 32px;
+  text-align: center;
+  line-height: 50px;
+  clip-path: polygon(25px 0, 50px 14.4px, 50px 35.6px, 25px 50px, 0 35.6px, 0 14.4px);
+}
+.big{
+  position: relative;
+  transform: scale(1.1);
+  background: skyblue;
+}
+.small{
+  position: absolute;
+  transform: scale(0.9);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background: white;
+}
+.titleTarget{
+  position: relative;
+  margin: 0 32px;
+  padding: 8px;
+  font-weight: bold;
+  border-bottom: 2px solid gold;
+}
+.titleTarget::before{
+  content: '';
+  display: block;
+  position: absolute;
+  left: -10px;
+  bottom: -6px;
+  width: 10px;
+  height: 10px;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+.titleTarget::after{
+  content: '';
+  display: block;
+  position: absolute;
+  right: -10px;
+  bottom: -6px;
+  width: 10px;
+  height: 10px;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+
+.blockInfoContainer{
+  padding: 0 16px;
+}
+.blockInfo{
+  position: relative;
+  padding: 8px;
+  border-left: 1px solid lightblue;
+  border-top: 2px solid lightgray;
+}
+.blockInfo>.blockInfoTitle{
+  position: absolute;
+  height: 30px;
+  width: 100px;
+  text-align: center;
+  line-height: 30px;
+  background: blue;
+  color: white;
+  font-weight: bold;
+  top: -30px;
+  left: 0;
+  clip-path: polygon(0 0, 80px 0, 100px 15px, 80px 30px, 0 30px)
+}
