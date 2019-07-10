@@ -25,13 +25,56 @@ class Resume extends Component {
 
           <div className="blockInfoContainer">
             <div className="blockInfo">
-              <p className="blockInfoTitle">教育经历</p>
-              <ul>
-                <li>fadsfasdf</li>
-                <li>fadsfasdf</li>
-                <li>fadsfasdf</li>
-                <li>fadsfasdf</li>
-              </ul>
+              <p className="blockInfoTitle">基本信息</p>
+              <div className="itemLayout">
+                <ul className="itemList">
+                  <li className="item">
+                    <span className="itemLabel">姓名</span>
+                    <span>孙寒</span>
+                  </li>
+                  <li className="item">
+                    <span className="itemLabel">名族</span>
+                    <span>汉</span>
+                  </li>
+                  <li className="item">
+                    <span className="itemLabel">姓名</span>
+                    <span>孙寒</span>
+                  </li>
+                  <li className="item">
+                    <span className="itemLabel">联系电话</span>
+                    <span>17786520405</span>
+                  </li>
+                  <li className="item">
+                    <span className="itemLabel">邮箱</span>
+                    <span>sunhtop@163.com</span>
+                  </li>
+                  <li className="item">
+                    <span className="itemLabel">住址</span>
+                    <span>湖北武汉</span>
+                  </li>
+                  <li className="item">
+                    <span className="itemLabel">个人网址</span>
+                    <span><a href="http://sunh.top">http://sunh.top</a></span>
+                  </li>
+                  <li className="item">
+                    <span className="itemLabel">出生年月</span>
+                    <span>1996.04</span>
+                  </li>
+                  <li className="item">
+                    <span className="itemLabel">政治面貌</span>
+                    <span>共青团员</span>
+                  </li>
+                  <li className="item">
+                    <span className="itemLabel">毕业院校</span>
+                    <span>文华学院</span>
+                  </li>
+                  <li className="item">
+                    <span className="itemLabel">专业</span>
+                    <span>计算机科学与技术</span>
+                  </li>
+                </ul>
+                <img className="itemImg" src="images/huaji.jpg" alt=""/>
+              </div>
             </div>
             <div className="blockInfo">
               <p className="blockInfoTitle">教育经历</p>
