@@ -43,6 +43,9 @@ const cssModuleRegex = /\.module\.css$/;
 const sassRegex = /\.(scss|sass)$/;
 const sassModuleRegex = /\.module\.(scss|sass)$/;
 
+// 添加的配置  只有使用.less结尾的样式，则都开启module模式，避免样式全局污染
+const lessModuleRegex = /\.less$/;
+
 // This is the production and development configuration.
 // It is focused on developer experience, fast rebuilds, and a minimal bundle.
 module.exports = function(webpackEnv) {
@@ -452,6 +455,23 @@ module.exports = function(webpackEnv) {
                 'sass-loader'
               ),
             },
+            
+            /* 参照上面的写法，但是有所更改，不区分module.less和.less结尾的文件，统一开启module模式 */
+            {
+              test: lessModuleRegex,
+              use: getStyleLoaders(
+                {
+                  importLoaders: 3,
+                  sourceMap: isEnvProduction && shouldUseSourceMap,
+                  modules: true,
+                  localIdentName:'[name]__[local]__[hash:base64:5]',
+                  // getLocalIdent: getCSSModuleLocalIdent,
+                },
+                'less-loader'
+              ),
+            },
+
+
             // "file" loader makes sure those assets get served by WebpackDevServer.
             // When you `import` an asset, you get its (virtual) filename.
             // In production, they would get copied to the `build` folder.

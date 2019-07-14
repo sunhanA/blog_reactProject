@@ -1,0 +1,96 @@
+.out{
+  width: 100vw;
+  height: auto;
+  background-image: url(/images/bg3.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+.in{
+  max-width: 1000px;
+  margin: 0 auto;
+  // margin-bottom: 60px;
+  // background: skyblue;
+}
+.myBook{
+  width: 100%;
+  text-align: center;
+  font-size: 32px;
+  font-weight: bold;
+  color: #666;
+  padding: 20px 0 0 0;
+  letter-spacing: 8px;
+  // background: gold;
+}
+
+.bookshelf{
+  // border: 1px solid black;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  font-size: 0;
+  .bookshelfHead{
+    transform: translateX(105px);
+  }
+  .bookshelfFoot{
+    transform: translateX(-47px);
+  }
+  .bookshelfBodyContainer{
+    position: relative;
+  }
+  .bookList{
+    position: absolute;
+    width: calc(100% - 444px);
+    height: 100%;
+    margin-left: 188px;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  .bookImg{
+    width: 88px;
+    height: 117px;
+    box-shadow: -4px 4px 4px black;
+  }
+}
+
+.model{
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.modelIn{
+  // border: 2px solid white;
+  width: 180px;
+  padding: 16px;
+  background: white;
+  border-radius: 20px;
+  >img{
+    display: inline-block;
+    width: 150px;
+    box-shadow: -4px 4px 4px black;
+    text-align: center;
+    margin-left: 50%;
+    margin-bottom: 6px;
+    transform: translateX(-50%);
+  }
+  >p{
+    padding: 0;
+    width: 100%;
+    margin: 0;
+    font-weight: bold;
+    text-align: center;
+  }
+  >a{
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+  }
+}

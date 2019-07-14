@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
-import './home.css'
+import styles from './home.css'
 
 class App extends Component{
     state = {
@@ -8,6 +8,7 @@ class App extends Component{
     }
     componentDidMount() {
       this.createText()
+      document.title = '孙寒的个人主页'
     }
     render(){
         return (
@@ -124,7 +125,7 @@ class App extends Component{
     }
 
     controlShow(){
-        console.log(this.refs)
+        // console.log(this.refs)
         this.refs.barrage.classList.toggle('hidden')
         this.setState({isShow: !this.state.isShow});
     }

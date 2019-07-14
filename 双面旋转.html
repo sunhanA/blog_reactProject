@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <style type="text/css">
+    .container{
+      position: relative;
+      /* overflow: hidden; 想通过此属性来设置子元素与父元素border-radius，但是这样旋转会出现问题*/ 
+      border-radius: 50%;
+      width: 100px;
+      height: 100px;
+      border: 2px solid black;
+      transform-style: preserve-3d;
+      transition: all 2s;
+    }
+    .container:hover{
+      transform: rotateX(180deg);
+    }
+    .container div{
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      
+    }
+    .font{
+      background: red;
+      transform: rotateX(180deg);
+    }
+    .back{
+      background: blue;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="font"></div>
+    <div class="back"></div>
+  </div>
+
+</body>
+</html>

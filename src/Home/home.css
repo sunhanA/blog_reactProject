@@ -81,6 +81,8 @@
 .footer>ul>li{
     display: inline-block;
     position: relative;
+    transition: all 1s;
+    transform-style: preserve-3d;
 }
 .footer>ul>li>a {
     display: block;
@@ -99,13 +101,12 @@
     left: 0;
 }
 .footer>ul>li:hover {
-    transform-style: preserve-3d;
     transform: rotateX(180deg);
-    transition: all 1s;
 }
 
 
 .menuIconBg {
+    /* background: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%); */
     background: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%);
     border-radius: 50%;
     display: flex;
